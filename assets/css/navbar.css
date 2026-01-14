@@ -1,0 +1,616 @@
+/* ====================== HPB TUBES NAVBAR STYLES ====================== */
+
+/* Header layout */
+.th-header {
+    position: relative;
+    width: 100%;
+    z-index: 999;
+}
+
+.th-header.header-absolute {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.sticky-wrapper {
+    background: rgba(19, 34, 60, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.menu-area {
+    padding: 15px 0;
+    position: relative;
+}
+
+.menu-area > .container {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+}
+
+.th-container5 {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px 0 30px;
+}
+
+/* Logo */
+.header-logo img {
+    width: 180px;
+    height: 65px;
+    display: block;
+    object-fit: contain;
+}
+
+/* Main Nav Container */
+.tpp-main-nav-container {
+    margin-left: 30px;
+}
+
+.tpp-main-nav-list {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tpp-main-nav-item {
+    position: relative;
+}
+
+.tpp-main-nav-link {
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    display: block;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.tpp-main-nav-link:hover {
+    color: blue;
+}
+
+/* Dropdown Menu */
+.tpp-main-nav-item.dropdown {
+    position: relative;
+}
+
+.tpp-main-nav-item .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border-radius: 6px;
+    list-style: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    flex-direction: column;
+    margin: 0;
+    padding: 8px 0;
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.tpp-main-nav-item.dropdown:hover .dropdown-menu {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.dropdown-menu li a:hover {
+    background: #f5f5f5;
+    color: #13223c;
+    border-left-color: #3ddc84;
+}
+
+/* Download Button */
+.th-btn {
+    background: #3ddc84;
+    color: #000;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.th-btn:hover {
+    background: #2fb96e;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.th-btn.style6 {
+    background: #4779ac;
+}
+
+.tpp-no-wrap {
+    white-space: nowrap;
+}
+
+/* 🌐 Language Dropdown Styling */
+.language-selector-wrapper {
+    position: relative;
+}
+
+.language-globe-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border: none;
+    background-color: #1a1f71;
+    color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.language-globe-btn:hover {
+    background-color: #142054;
+    transform: scale(1.05);
+}
+
+.language-dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    min-width: 240px;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.language-dropdown.show {
+    display: block;
+}
+
+.language-dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.language-dropdown a:last-child {
+    border-bottom: none;
+}
+
+.language-dropdown a:hover {
+    background: #f9f9f9;
+}
+
+.language-dropdown .flag {
+    font-size: 18px;
+}
+
+/* Mobile Menu Button */
+.tpp-mobile-menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-left: auto;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.tpp-mobile-menu-btn:hover {
+    color: #4779ac;
+}
+
+/* Header Button Container */
+.header-button {
+    margin-right: 10px;
+}
+
+/* ====================== MOBILE MENU OVERLAY ====================== */
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-nav-menu {
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 300px;
+    max-width: 85vw;
+    height: 100vh;
+    background: #13223c;
+    z-index: 9999;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-nav-menu.active {
+    right: 0;
+}
+
+.mobile-nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-header img {
+    width: 140px;
+    height: auto;
+}
+
+.mobile-nav-close {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1;
+}
+
+.mobile-nav-close:hover {
+    color: #4779ac;
+}
+
+.mobile-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-nav-list li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-list li a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-list li a:hover {
+    background: rgba(71, 121, 172, 0.2);
+    color: #4779ac;
+    padding-left: 25px;
+}
+
+/* Mobile Dropdown */
+.mobile-nav-list .mobile-dropdown > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-nav-list .mobile-dropdown > a::after {
+    content: '+';
+    font-size: 20px;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+}
+
+.mobile-nav-list .mobile-dropdown.open > a::after {
+    content: '−';
+}
+
+.mobile-dropdown-menu {
+    display: none;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0;
+    list-style: none;
+}
+
+.mobile-dropdown.open .mobile-dropdown-menu {
+    display: block;
+}
+
+.mobile-dropdown-menu li a {
+    padding: 12px 20px 12px 35px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.mobile-dropdown-menu li a:hover {
+    color: #fff;
+    background: rgba(71, 121, 172, 0.15);
+}
+
+/* Mobile Nav Actions */
+.mobile-nav-actions {
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-actions .th-btn {
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.mobile-nav-actions .language-globe-btn {
+    width: 100%;
+    justify-content: center;
+}
+
+/* ====================== RESPONSIVE STYLES ====================== */
+@media (max-width: 1199px) {
+    .tpp-main-nav-link {
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+    
+    .th-btn {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+    
+    .language-globe-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    .tpp-main-nav-list {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 991px) {
+    .tpp-main-nav-container,
+    .language-selector-wrapper,
+    .header-button,
+    .header-actions-wrapper {
+        display: none !important;
+    }
+    
+    .tpp-mobile-menu-btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .header-logo img {
+        width: 140px;
+        height: 50px;
+    }
+    
+    .th-container5 {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 575px) {
+    .header-logo img {
+        width: 120px;
+        height: 45px;
+    }
+    
+    .menu-area {
+        padding: 10px 0;
+    }
+    
+    .mobile-nav-menu {
+        width: 280px;
+    }
+}
+
+/* Sticky Header - removed as we use fixed positioning now */
+
+/* ====================== MOBILE BANNER FIX ====================== */
+/* Override the template's hiding of banner images on mobile */
+@media only screen and (max-width: 767px) {
+    .main-slider-four__shape-1,
+    .main-slider-four__shape-2,
+    .main-slider-four__shape-3 {
+        display: block !important;
+    }
+    
+    .main-slider-four__shape-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+    
+    .main-slider-four__shape-1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .main-slider-four__content {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .main-slider-four__title {
+        font-size: 28px !important;
+        line-height: 36px !important;
+    }
+    
+    .main-slider-four__text {
+        font-size: 14px;
+    }
+}
+
+/* ====================== WHY CHOOSE HPB TUBES LIST FIX ====================== */
+/* Fix ul list overflow on mobile */
+.testimonial-four__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.testimonial-four__list li {
+    position: relative;
+    padding-left: 0;
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 991px) {
+    .testimonial-four {
+        overflow: hidden !important;
+    }
+    
+    .testimonial-four__wrap {
+        overflow: hidden !important;
+        padding: 30px 15px;
+    }
+    
+    .testimonial-four__left {
+        max-width: 100%;
+        overflow: hidden;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
+    .testimonial-four__list {
+        max-width: 100%;
+        padding: 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        box-sizing: border-box;
+    }
+    
+    .testimonial-four__list li {
+        max-width: 100%;
+        font-size: 14px;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 10px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .section-title {
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    .section-title__title {
+        font-size: 26px !important;
+        line-height: 34px !important;
+        word-wrap: break-word;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .testimonial-four__list li {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+    
+    .section-title__title {
+        font-size: 22px !important;
+        line-height: 30px !important;
+    }
+    
+    .testimonial-four__left {
+        padding: 0 10px;
+    }
+}
+
+/* Ensure section title is visible on mobile */
+@media only screen and (max-width: 991px) {
+    .testimonial-four .section-title__title {
+        color: #000 !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        z-index: 10 !important;
+        clip: auto !important;
+        -webkit-clip-path: none !important;
+        clip-path: none !important;
+        overflow: visible !important;
+        height: auto !important;
+        width: auto !important;
+        font-size: 24px !important;
+        line-height: 32px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .testimonial-four .section-title {
+        display: block !important;
+        visibility: visible !important;
+        margin-bottom: 20px;
+        position: relative !important;
+        z-index: 10 !important;
+        overflow: visible !important;
+        height: auto !important;
+    }
+    
+    .testimonial-four__left {
+        position: relative;
+        z-index: 5;
+    }
+}
